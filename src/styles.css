@@ -1,0 +1,30 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+}
+.card {
+  width: 250px;
+  margin: 50px auto;
+}
+
+form {
+  text-align: center;
+  padding: 20px;
+}
+
+.textField {
+  width: 500px;
+}
+
+.searchButton {
+  margin-top: 20px;
+}
+
+.checked {
+  display: flex;
+  margin-left: 20px;
+}
