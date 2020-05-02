@@ -21,7 +21,7 @@ const FETCH_COUNTRIES_ERROR = "FETCH_COUNTRIES_ERROR";
 export const getCountries = str => dispatch => {
   dispatch(loadCountries());
   axios
-    .get("https://restcountries.eu/rest/v2/name/" + str)
+    .get(process.env.REACT_APP_ENDPOINTCOUNTRIES + str)
     .then(response => {
       if (response.data.message === "Not Found") {
         dispatch(setError("No countries found"));
