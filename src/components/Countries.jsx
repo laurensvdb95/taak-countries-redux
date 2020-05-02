@@ -18,12 +18,16 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
 import { checkCountry } from "../data/checkedCountries";
 
+
+
+
 export default () => {
   const { loading, error, data } = useSelector(state => state.countries);
   const checkedcountries = useSelector(state => state.checkedcountries);
   const checkedCountriesArr = checkedcountries.map(
     checkedCountry => checkedCountry.numericCode
   );
+
   const dispatch = useDispatch();
 
   const checkHandler = country => e => {

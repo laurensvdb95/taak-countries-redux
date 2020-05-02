@@ -2,7 +2,7 @@ import "./styles.css";
 import React from "react";
 import { Provider } from "react-redux";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
 
@@ -12,8 +12,12 @@ import store from "./data";
 import CountryForm from "./components/CountryForm";
 import Countries from "./components/Countries";
 import CheckedCountries from "./components/CheckedCountries";
+import CheckedButton from "./components/CheckedButton"; 
+
+
 
 export default () => {
+
   return (
     <div className="App">
       <Provider store={store}>
@@ -31,9 +35,7 @@ export default () => {
             </IconButton>
           </Link>
           <Link to="/checked">
-            <IconButton>
-              <CheckCircleIcon />
-            </IconButton>
+           <CheckedButton/>
           </Link>
           <Switch>
             <Route exact path="/">
